@@ -4,30 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignupActivity"
+    tools:context=".LoginActivity"
     android:padding="10dp"
     android:background="@drawable/background">
 
     <ImageView
-        android:id="@+id/logo1"
+        android:id="@+id/logo"
         android:layout_width="136dp"
         android:layout_height="208dp"
         app:srcCompat="@drawable/logo"
         android:layout_centerHorizontal="true"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="180dp">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/username1"
-            android:hint="Korisničko ime"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:background="@drawable/edit_text_background"
-            android:gravity="center"/>
-    </com.google.android.material.textfield.TextInputLayout>
+   <com.google.android.material.textfield.TextInputLayout
+       android:layout_width="250dp"
+       android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="180dp">
+       <com.google.android.material.textfield.TextInputEditText
+           android:id="@+id/username"
+           android:hint="Korisničko ime"
+           android:layout_width="250dp"
+           android:layout_height="50dp"
+           android:background="@drawable/edit_text_background"
+           android:gravity="center"/>
+   </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="250dp"
@@ -36,7 +36,7 @@
         app:passwordToggleEnabled="true"
         android:layout_marginTop="240dp">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password1"
+            android:id="@+id/password"
             android:hint="Lozinka"
             android:layout_width="250dp"
             android:layout_height="50dp"
@@ -44,39 +44,36 @@
             android:gravity="center"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        app:passwordToggleEnabled="true"
-        android:layout_marginTop="300dp">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/retypepassword1"
-            android:hint="Ponovite lozinku"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:background="@drawable/edit_text_background"
-            android:gravity="center"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
     <Button
-        android:id="@+id/signup1"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="130dp"
+        android:id="@+id/signin"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="320dp"
         android:background="@drawable/round_button"
         android:textColor="@color/white"
-        android:text="Registracija"/>
+        android:text="Prijava"/>
+
+    <Button
+        android:id="@+id/signup"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/round_button"
+        android:textColor="@color/white"
+        android:text="Novi korisnik"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/signup1"
+        android:layout_below="@+id/signup"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:hint="Register"
+        android:hint="Login"
         android:textColor="@color/black"
         android:textSize="40dp"
         android:textStyle="bold"/>

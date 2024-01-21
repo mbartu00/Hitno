@@ -6,18 +6,19 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class Database extends SQLiteOpenHelper {
+public class DBHelperUsers extends SQLiteOpenHelper {
 
-    public static final String DBNAME = "Login.db";
+    public static final String DBNAME = "Users.db";
 
-    public Database(Context context) {
-        super(context, "Login.db", null,1);
+    public DBHelperUsers(Context context) {
+        super(context, "Users.db", null,1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase MyDB) {
-        MyDB.execSQL("create Table users(username TEXT primary key, password TEXT)");
+        MyDB.execSQL("create Table users(id INTEGER primary key autoincrement, username TEXT, password TEXT)");
     }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase MyDB, int i, int i1) {
